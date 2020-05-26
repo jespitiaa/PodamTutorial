@@ -29,7 +29,7 @@ public class Compra implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Compra realizada en: " + fecha.toLocaleString() + ", con " + articulos.size() + " articulos, por un total de $" + total;
+		return "Compra realizada en: " + fecha.toLocaleString() + ", con " + articulos.size() + " articulos, por un total de $" + total + "\nActualmente en estado: " + estado;
 	}
 	
 	public void cambiarEstado(String estado) {

@@ -17,8 +17,7 @@
     <dependency>
 	  <groupId>uk.co.jemos.podam</groupId>
 	  <artifactId>podam</artifactId>
-	  <version>[latest.version]</version>
-	  <!-- <scope>test</scope> -->
+	  <version>7.2.3.RELEASE</version>
 	</dependency>
   </dependencies>
 </project>

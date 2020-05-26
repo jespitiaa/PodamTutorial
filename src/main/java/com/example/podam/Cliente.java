@@ -19,7 +19,18 @@ public class Cliente implements Serializable {
 		this.compras = new ArrayList<Compra>();
 	}
 	
-	public void comprar(ArrayList<ArticuloUnitario> articulos) {
-		compras.add(new Compra(articulos));
+	@Override
+	public String toString() {
+		return "Cliente: " + nombre + " con correo " + correo + " y número de telefono " + telefono;
+	}
+	
+	public void comprar(ArticuloUnitario articulos) {
+		ArrayList<ArticuloUnitario> arts = new ArrayList<ArticuloUnitario>();
+		arts.add(articulos);
+		compras.add(new Compra(arts));
+	}
+	
+	public ArrayList<Compra> getCompras(){
+		return compras;
 	}
 }

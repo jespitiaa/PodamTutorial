@@ -23,14 +23,37 @@ public class Vendedor implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "";
+		return nombre + ". Correo: " + correo + ", telefono: " + telefono;
 	}
 	
 	public void vender(int index) {
+		System.out.println("antes - disp: "+artDisponibles.size() + " - vend: " + artVendidos.size());
 		artVendidos.add(artDisponibles.remove(index));
+		System.out.println("despues - disp: "+artDisponibles.size() + " - vend: " + artVendidos.size());
+
 	}
 	
 	public void ofrecer(ArticuloUnitario articulo) {
 		artDisponibles.add(articulo);
+	}
+
+	public ArrayList<ArticuloUnitario> getVendidos() {
+		return artVendidos;
+	}
+	
+	public ArrayList<ArticuloUnitario> getDisponibles() {
+		return artDisponibles;
+	}
+	
+	public void imprimirDisponibles() {
+    	if(artDisponibles.size() == 0) {
+    		System.out.println("Este vendedor no tiene productos disponibles en el momento. Ingrese 0 para regresar");
+    	}
+    	else {
+    		System.out.println("¿Qué producto desea comprar?\nIndique el número del producto");
+    		for(int i=0;i<artDisponibles.size();i++) {
+    			System.out.println((i+1) + ". " + artDisponibles.get(i).toString());
+    		}
+    	}
 	}
 }
