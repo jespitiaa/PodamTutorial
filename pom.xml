@@ -14,10 +14,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-	  <groupId>uk.co.jemos.podam</groupId>
-	  <artifactId>podam</artifactId>
-	  <version>7.2.3.RELEASE</version>
-	</dependency>
   </dependencies>
 </project>
